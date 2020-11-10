@@ -94,7 +94,7 @@ h1 {
 @media(max-width:600px) {
     main {
         width: auto;
-
+        max-width: 90vw;
     }
 
     #container-calculadora {

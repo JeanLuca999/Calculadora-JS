@@ -21,7 +21,6 @@ function criarCalculadora() {
     })
 
     adicionar($containerCalculadora, Botao('LIMPAR','botao-limpar', 'limpar()'))
-
     document.getElementById('resultado').innerHTML = ''
 }
 
