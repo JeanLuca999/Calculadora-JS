@@ -12,12 +12,12 @@ function adicionar(pai, filho) {
 
 function criarCalculadora() {
     adicionar($containerCalculadora, Resultado())
-    numeros.forEach((numero)=>{
-        adicionar($containerCalculadora, Botao(numero, 'botao-valor', 'concatenar(this)'))
+    numeros.forEach((numero)=> {
+        adicionar($containerCalculadora, Botao(numero, 'botao-valor', 'concatenarValor(this)'))
     })
 
-    operadores.forEach((operador)=>{
-        adicionar($containerCalculadora,Botao(operador, 'botao-valor botao-operador', 'concatenar(this)'))
+    operadores.forEach((operador)=> {
+        adicionar($containerCalculadora,Botao(operador, 'botao-valor botao-operador', 'concatenarValor(this)'))
     })
 
     adicionar($containerCalculadora, Botao('LIMPAR','botao-limpar', 'limpar()'))
@@ -26,9 +26,9 @@ function criarCalculadora() {
 }
 
 
-function concatenar(that) {
+function concatenarValor(that) {
     if(that.innerHTML == '=') {
-        try{
+        try {
             let calcular = document.getElementById('resultado').innerHTML
             calcular = calcular.replace(/X/g,'*')
             document.getElementById('resultado').innerHTML = eval(calcular)
