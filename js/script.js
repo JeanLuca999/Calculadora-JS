@@ -29,7 +29,9 @@ function criarCalculadora() {
 function concatenar(that) {
     if(that.innerHTML == '=') {
         try{
-            document.getElementById('resultado').innerHTML = eval(document.getElementById('resultado').innerHTML)
+            let calcular = document.getElementById('resultado').innerHTML
+            calcular = calcular.replace(/X/g,'*')
+            document.getElementById('resultado').innerHTML = eval(calcular)
         } catch {
             window.alert('Operação inválida!')
         }
