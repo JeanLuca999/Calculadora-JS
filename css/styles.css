@@ -8,12 +8,33 @@ html {
 }
 
 body {
-    font-family: 'Poppins';
+    font-family: 'Poppins', sans-serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 50vw;
+    max-width: 500px;
+
+    height: 50vh;
+
+    margin: 30px auto;
+
+    background-color: rgba(220, 223, 228, 0.651);
+
+    border-radius: 20px;
 }
 
 h1 {
     text-align: center;
     font-size: 3rem;
+    border-bottom: 2px solid rgb(0, 0, 0);
+
+    margin-bottom: 10px;
 }
 
 #container-calculadora {
