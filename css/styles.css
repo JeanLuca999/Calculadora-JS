@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    outline: 0;
 }
 
 html {
@@ -84,4 +85,24 @@ h1 {
     width: 222px;
     color: white;
     background-color: rgb(255, 38, 38);
+}
+
+.botao-valor:active, .botao-operador:active, .botao-limpar:active {
+    transform: scale(0.95,0.95)
+}
+
+@media(max-width:600px) {
+    main {
+        width: auto;
+
+    }
+
+    #container-calculadora {
+        max-width: 200px;
+    }
+
+    .botao-valor, .botao-operador {
+        width: 40px;
+        margin: 0 auto;
+    }
 }

@@ -28,7 +28,11 @@ function criarCalculadora() {
 
 function concatenar(that) {
     if(that.innerHTML == '=') {
-        document.getElementById('resultado').innerHTML = eval(document.getElementById('resultado').innerHTML)
+        try{
+            document.getElementById('resultado').innerHTML = eval(document.getElementById('resultado').innerHTML)
+        } catch {
+            window.alert('Operação inválida!')
+        }
     } else {
         document.getElementById('resultado').innerHTML += that.innerHTML
     }
